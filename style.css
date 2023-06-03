@@ -1,31 +1,145 @@
 /* variables */
 :root {
-    --font-size: 1.3rem;
-    --mono: "Osygen mono", monospace;
-    --sans: Oxygen, sans-serif;
-    --red: #ef476f;
-    --yellow: #ffd166;
-    --green: #06d6a0;
-    --blue: #118ab2;
-    --dkBlue: #073b4c;
-    --white: #f9f7f3;
+  --font-size: 1.2rem;
+  --mono: 'Oxygen mono', monospace;
+  --sans: Oxygen, sans-serif;
+  --red: #ef476f;
+  --redLight: #f57190;
+  --yellow: #ffd166;
+  --yellowLight: #fadb94;
+  --green: #06d6a0;
+  --blue: #0e3f79;
+  --dkBlue: #07274c;
+  --white: #f9f7f3;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--dkBlue);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--red);
+}
+
+a:hover {
+  color: var(--redLight);
+  text-decoration: none;
+}
+
+.fa-brands {
+    /* color: var(--redLight) */
+}
+
+
+/* navbar */
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav ul {
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    font-family: var(--sans);
-    background-color: var(--dkBlue);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--green)
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--green)
+}
+
+nav a {
     color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover, 
+nav [class*="fa-"]:hover,
+nav .name-link {
+    color: var(--redLight)
+}
+
+
+
+/* Intro styles */
+#intro {
+    padding-bottom: 10rem;
+}
+
+#intro p {
+    font-size: 1rem;
+    /* line-height is relative */
+    line-height: 1.5; 
+}
+
+#intro .name {
+    font-family: var(--mono);
+}
+
+#intro .name span {
+    font-family: var(--sans);
+    font-size: 3rem;
+    color: var(--green);
+    display: block;
+}
+
+#intro h2 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+
+/* Contact section styles */
+#contact {
+    background: var(--blue);
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
     font-size: var(--font-size);
+}
+
+#contact p:last-child {
+    margin-top: 3rem;
 }
